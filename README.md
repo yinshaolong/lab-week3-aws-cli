@@ -1,5 +1,7 @@
 # 4640-w3-lab-start-w25
 
+Xinyu Going, Christopher Poon, John Yin
+
 ### Script 1: import_key.sh
 This script imports a public SSH key into AWS EC2.
 *   **Command:** `aws ec2 import-key-pair`
