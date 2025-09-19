@@ -1,0 +1,14 @@
+vpc_id=vpc-0a22fb75408547cb1
+subnet_id=subnet-0dec66f5fd2d1cccd
+region=us-west-2
+debian_ami=$(aws ec2 describe-images \
+  --region "$region" \
+  --owners 136693071363 \
+  --filters 'Name=name,Values=debian-12-amd64-*' 'Name=architecture,Values=x86_64' 'Name=virtualization-type,Values=hvm' \
+  --query 'Images | sort_by(@, &CreationDate) | [-1].ImageId' \
+  --output text)
+echo "debian_ami=$debian_ami" | tee -a infrastructure_data
+
+debian_ami=ami-01b8b94e7ce1cc589
+debian_ami=ami-01b8b94e7ce1cc589
+debian_ami=ami-01b8b94e7ce1cc589
